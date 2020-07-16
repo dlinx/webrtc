@@ -49,7 +49,6 @@ const login = () => {
     debug: 1,
     host: window.location.hostname,
     path: "/peer",
-    port: 3000,
   });
   peer.on('call', (call) => {
     call.answer(myStream);
