@@ -11,10 +11,10 @@ const $ctrlDiv = document.getElementById('ctrlDiv');
 const $videos = document.getElementById('videos');
 
 const init = () => {
-  navigator.getUserMedia(
+  navigator.mediaDevices.getUserMedia(
     {
       audio: true,
-      video: true,
+      video: false,
     },
     (_str) => {
       myStream = _str;
