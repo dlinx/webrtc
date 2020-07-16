@@ -13,7 +13,7 @@ const $videos = document.getElementById('videos');
 const init = () => {
   navigator.getUserMedia(
     {
-      audio: false,
+      audio: true,
       video: true,
     },
     (_str) => {
