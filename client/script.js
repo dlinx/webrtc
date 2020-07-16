@@ -45,7 +45,7 @@ const login = () => {
         },
       ],
     },
-    secure: false,
+    secure: true,
     debug: 1,
     host: window.location.hostname,
     path: "/peer",
