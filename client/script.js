@@ -11,7 +11,7 @@ const $ctrlDiv = document.getElementById('ctrlDiv');
 const $videos = document.getElementById('videos');
 
 const init = () => {
-  navigator.mediaDevices.getUserMedia(
+  navigator.getUserMedia(
     {
       audio: true,
       video: false,
