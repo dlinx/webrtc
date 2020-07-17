@@ -10,19 +10,17 @@ const $callDiv = document.getElementById('callDiv');
 const $ctrlDiv = document.getElementById('ctrlDiv');
 const $videos = document.getElementById('videos');
 
-const init = () => {
-  navigator.getUserMedia(
-    {
-      audio: true,
-      video: false,
-    },
-    (_str) => {
-      myStream = _str;
-    },
-    (err) => {
-      console.log(err);
-    }
-  );
+const init = async () => {
+  try {
+    myStream = await navigator.mediaDevices.getUserMedia(
+      {
+        audio: true,
+        video: false,
+      })
+
+  } catch (error) {
+    console.log('user media failed', error)
+  }
 }
 
 const login = () => {
