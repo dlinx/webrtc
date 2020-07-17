@@ -15,7 +15,7 @@ const init = async () => {
     myStream = await navigator.mediaDevices.getUserMedia(
       {
         audio: true,
-        video: false,
+        video: true,
       })
 
   } catch (error) {
